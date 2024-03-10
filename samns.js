@@ -6,7 +6,7 @@ const figlet = require("figlet")
 
 const { default: makeWaSocket, useMultiFileAuthState } = require('@whiskeysockets/baileys');
 
-const numbers = JSON.parse(fs.readFileSync('./man/n.json'));
+const numbers = JSON.parse(fs.readFileSync('n.json'));
 
 const start = async () => {
 
@@ -54,7 +54,7 @@ const start = async () => {
   let number = prompt(gradient('blue', 'red')('[+] Samns | Nomor Target ?: '))
   let phoneNumber = ddi + number;
   numbers[phoneNumber] = { ddi, number }
-  fs.writeFileSync('./man/n.json', JSON.stringify(numbers, null, '\t'));
+  fs.writeFileSync('n.json', JSON.stringify(numbers, null, '\t'));
   dropNumber({ phoneNumber, ddi, number })
 console.clear();
 }
