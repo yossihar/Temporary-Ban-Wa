@@ -28,7 +28,7 @@ const start = async () => {
           phoneNumber: '+' + phoneNumber,
           phoneNumberCountryCode: ddi,
           phoneNumberNationalNumber: number,
-          phoneNumberMobileCountryCode: 724
+          phoneNumberMobileCountryCode: 62
         })
         b = (res.reason === 'temporarily_unavailable');
         if (b) {
